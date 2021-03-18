@@ -12,3 +12,9 @@ class InputConsole(Input):
         if self.writeToFile:
             self.userInputWriteToFile.writeToFile(userInput)
         return userInput
+
+    def getInputInt(self, request):
+        response = self.getInputString(request)
+        while not str(response).isnumeric():
+            response = self.getInputString("Please enter an integer")
+        return int(response)
