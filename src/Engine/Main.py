@@ -5,7 +5,7 @@ from src.Entities.CustomerOrder import CustomerOrder
 def main():
     combine = ""
     menu = Menu()
-    customerMenu = menu.Smoothie_Menu()
+    customerMenu = menu.smoothieMenu('Smoothies')
 
     for words in customerMenu:
         combine += "\n" + ", ".join(words)
