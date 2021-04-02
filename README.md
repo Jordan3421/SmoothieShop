@@ -20,3 +20,5 @@ bill the customer and take away from their wallet funds, if no wallet funds then
 - Receipt from order after paying. 
 - Transaction history for managers.
 
+The project makes use of adapter design patterns to allow for swapping out the input that is being used within the CustomerOrder class. Our main class is CustomerOrder which has addItems, orderReview, confirmOrder, removeItem and orderTotal methods within the class. This class makes use of InputConsole class, ReadSmoothieFile class and CustomSmoothie class. 
+The ReadSmoothieFile class uses the ReadCSVFile class to read our smoothie menu csv file and then return it, which is then accessed by the main CustomerOrder class. 
